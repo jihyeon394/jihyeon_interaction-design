@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device">
+	<title>기본페이지</title>
+	<style>
+		body{background-image: url(image1.jpg);
+
+			color: white;}
+
+		@font-face {font-family: 'BonmyeongjoSourceHanSerif';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff');
+			font-weight: normal;
+			font-display: swap;}
+
+        @font-face {
+    font-family: 'Euljiro10YearsLater';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/BMEuljiro10yearslater.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;}
+
+		html{font-family: 'BonmyeongjoSourceHanSerif';
+			font-weight: 700;
+			word-break: keep-all;}
+
+		div.contents{width: 1024px;
+			margin: 0 auto;
+			text-align: center;
+			padding: 120px 0;
+			color: black;}
+
+		h1{font-family: 'Euljiro10YearsLater';
+			font-size: 100px;
+			text-align:left;
+			margin: 0;
+			padding: 150px 0;
+			color: #9c2224}
+
+		h4{font-family: 'Euljiro10YearsLater';
+			font-size: 42px;
+			text-align:left;
+			margin: 0;
+			padding: 0px 0;
+			color: #9c2224}
+  
+		h2{font-size: 32px;
+			text-align: center;
+			margin: 0;
+			padding: 150px 0;
+		font-weight: 900;}
+
+		h3{font-size: 30px;
+			text-align:center;
+			margin:0;
+			padding:70px 0;
+		font-weight: 900;}
+
+		p{font-size: 21px;
+			text-align: center;
+			padding: 0px 0;}
+
+		.intro{font-size: 21px;}
+
+		.main-text{font-size: 30px;
+			color: #d30010;
+			padding-top: 200px;
+			padding-bottom: 200px;
+			font-weight: 3000;}
+
+		.small-text{
+			font-size: 16px;
+			color: #a30f0f;}
+
+		.small-text2{
+			font-size: 20px;
+			color:#ff0019;
+			font-weight: 900;}
+
+		.scare-text{
+	font-family: 'Euljiro10YearsLater';
+	font-size: 30px;
+	color: #ff0019;
+	font-weight: 900;}
+	
+		img{width: 50%;
+			display: block;
+			margin: 0 auto;
+			padding: 50px 0;}
+
+		.card{
+	width: 1200px;
+	margin: 100px auto;
+	padding: 0 0 80px 0;
+	background: white;
+	color: black;
+	border-radius: 24px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+	section{
+	opacity: 1;
+	transform: translateY(0px);
+	transition: all 0.8s ease;}
+
+    section.show{
+	opacity: 1;
+	transform: translateY(0);}
+
+.danger-bg{
+	background-image: url('image14.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.danger-bg .contents{
+	padding: 220px 0;
+}
+
+.danger-bg .main-text{
+	color: white;
+	text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+.bg-team{
+	background-image: url('image15.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.bg-team .contents{
+	color: white;
+}
+
+.bg-title{
+	background-image: url('image1.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.bg-title .contents{
+	color: white;
+}
+</style>
+</head>
+<body>
+<script>
+var sections = document.querySelectorAll("section");
+
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+sections.forEach(function(section) {
+  observer.observe(section);
+});
+</script>
+</body>
+	
+	<body>
+		<div class="card">
+
+		<section class="bg-title">
+		 <div class="contents">
+				<h1>그의 공격</h1>
+				<h4>이 이야기는 한 공대생에게 공격당한 불쌍한 인문대생의 이야기입니다..</h4>
+
+				</div>
+		</section>	
+
+		<section>
+			<div class="contents">
+					<p class="intro">나는야 자랑스러운 서울과학기술대학교 학생</p>
+				<img src="image3.jpg">
+			</div>
+		</section>	
+
+		<section>
+			<div class="contents">
+				<h2>"서울과학기술대학교"</h2>
+				<p>이름에 걸맞게, 우리학교는 공대생 밭이다.</p>
+				<p>나는 여기서 몇 안되는 인문대생</p>
+				<img src="image4.jpg">
+				<p class="main-text">경영학도이다!</p>
+				<img src="image5.jpg">
+				<p>공대 =  남초</p>
+				<p>그렇다.. 과기대는 남초학교다</p>
+				<p class="small-text">저 35%중에 한 명이 바로 나예요.</p>
+				<img src="image6.jpg">
+			</div>
+		</section>
+
+		
+		<section>
+			<div class="contents">
+				<h2>사건은 교양수업에서 발생한다..</h2>
+				<p>이 수업은 시험 두 번에 팀플 발표까지 있는 수업이었다.</p>
+				<p>남초학교에서 나는 당첨되었다!</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p class="main-text">♥︎홍일점♥︎
+					<img src="image2.jpg">
+				<p class="small-text">어떡하라고어떻ㅎ카라고!!</p>
+			</div>
+			</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p>그렇게 공대 남학생 3명, 그리고 나</p>
+				<p>4명이 한 조가 되었다.</p>
+				<img src="image7.jpg">
+				<p>근데 왜 무임승차가 두 명이나 있지?</p>
+				<p class="small-text">팀플이라며 팀플이라며 팀플이라며</p>
+				<p class="main-text">이건 듀엣이잖아.</p>
+			</div>
+			</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p>저와 듀엣을 하게된 공대생을 편의상 "그(he)"라고 부르겠습니다</p>
+				</div>
+			</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p>나와 그는 인당 2인분 이상을 하며</p>
+				<p>속된말로 뺑이(?)를 쳤다.</p>
+				<img src="image8.jpg">
+				<p>나와 그는 추운 프론티어관에서 밤을 새가며</p>
+				<p>발표를 준비했다</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p class="small-text">자료조사 하느라 논문 15개 읽기</p>
+				<p class="small-text">PPT 50장 만들기</p>
+				<p class="small-text">무임승차 인원의 대본 대신 써주기</p>
+				<p class="small-text">피드백 받고 주제 갈아엎기</p>
+				<p class="small-text">새벽 두시에 N61번 타고 귀가하기</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<img src="image9.jpg">
+				<p>고생한 보람일까 발표는 무사히 잘 끝이났다</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p>고생한만큼 나와 그 사이에는 묘한 전우애가 생겼다!</p>
+				<p>근데 그는,,</p>
+			</div>
+			</section>
+
+        <section>
+			<div class="contents">
+				<p class="scare-text">다른 애정이 생겼나봐</p>
+			</div>
+			</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p>기말고사 하루전, 그에게 온 장문의 카톡,,</p>
+				<img src="image10.jpg">
+			</div>
+		    </section>
+
+	<section class="danger-bg">
+			<div class="contents">
+				<p class="small-text2">원래 만나서 이야기하려고 했는데 제가 말주변이 없어서요..</p>
+				<p class="small-text2">결론부터 말씀드리면 제가 누리씨에게 관심있어서 잘해보고싶다는 이야기예요</p>
+				<p class="small-text2">제가 연애경험이 많진 않아서 어떻게 말을 해야할지 모르겠지만,,</p>
+				<p class="small-text2">이번학기 끝나면 더 보기도 힘들거같아서요</p>
+				<p class="small-text2">제대로 이야기해본건 몇 번 안되지만 누리씨랑 같이 있으면 재미있고 좋아서요..</p>
+		</div>
+		</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p class="scare-text">?????</p>
+				<img src="image11.jpg">
+			<p class="small-text">너 나랑 말도 몇마디 안해봤잖아</p>
+			<p class="small-text">내가 너 오해하게 한 게 뭐있는데</p>
+			<p class="small-text">고백은 확인하는 단계인거지</p>
+			<p class="small-text">이렇게 갈기는게 아니란말이다</p>
+			<p class="small-text">나, 너무 당황스러워</p>
+			<p class="small-text">어떡하라고어떻카라고어ㄸ하라고!</p>
+		</div>
+		</section>
+
+		<section class="bg-team">
+			<div class="contents">
+				<h2></h2>
+				
+		</div>
+		</section>
+	
+	   <section>
+			<div class="contents">
+				<h2></h2>
+				<p>♥︎시험 전날에 고백공격 받기♥︎</p>
+				<img src="image12.jpg">
+		</div>
+		</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p>그렇게 내 기말은..</p>
+		</div>
+		</section>
+
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+		<p class="main-text">망했다.</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p class="small-text">아마 그는 고백 공격으로, 내 시험공부를 방해하고</p>
+				<p class="small-text">경쟁자 한 명을 제치고 싶었던 게 아니었을까?</p>
+				<img src="image13.jpg">
+				<p class="small-text">("아싸, 한 명 제쳤고")</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="contents">
+				<h2></h2>
+				<p>결론.</p>
+			</div>
+		</section>
+
+		<section>
+	<div class="contents">
+		<h2></h2>
+		<p class="main-text">공대생은 위험하다</p>
+	</div>
+</section>
+
+	</body>
+
+</html>
